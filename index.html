@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Information Radiator</title>
+		<!-- Set the character set to utf-8 -->
+		<meta charset="utf-8">
+		<!-- Edge mode tells Internet Explorer to display content in the highest mode available. -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- The viewport is set to the width of the device and initially shown at 1:1 scale (without zooming) -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Set a favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+		<!-- Load Bootstraps stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+		<!-- Load Font Awesome stylesheet-->
+		<link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.min.css">
+		<!-- Load Blog stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/information-radiator/information-radiator.css">
+	</head>
+	<body>
+		<div class="wrapper">
+	<nav id="navigation" class="navbar navbar-inverse navbar-static-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-content">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/">Renta Information Radiator</a>
+		</div>
+
+		<div id="navbar-collapse-content" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li id="navbar-home"><a href="/"><i class="fa fa-home fa-fw"></i> Home</a></li>
+				<li id="navbar-projects" class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href=""><i class="fa fa-edit fa-fw"></i> Edit <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="/smart-actions"><i class="fa fa-list-alt fa-fw"></i> SMART Actions</a></li>
+						<li><a href="/calendar"><i class="fa fa-calendar fa-fw"></i> Calendar</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+	<div class="container">
+		<div class="row">
+	<div id="burndown" class="col-md-7">
+		<h3><i class="fa fa-signal fa-fw"></i> Burndown</h3>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+{
+    "dataSourceUrl": "//docs.google.com/spreadsheet/tq?key=0AqJbzJ2ZC3PodGxRZ084bWkwY01sUFN5SzB4ZkJvbHc&transpose=1&headers=1&range=G18%3AQ21&gid=88&pub=1",
+    "options": {
+        "displayAnnotations": true,
+        "showTip": true,
+        "curveType": "",
+        "dataMode": "markers",
+        "maxAlternation": 1,
+        "animation": {
+            "duration": 0
+        },
+        "pointSize": "0",
+        "colors": ["#3366CC", "#DC3912", "#FF9900", "#109618", "#990099", "#0099C6", "#DD4477", "#66AA00", "#B82E2E", "#316395"],
+        "lineWidth": "2",
+        "labelPosition": "right",
+        "is3D": false,
+        "hAxis": {
+            "useFormatFromData": true,
+            "viewWindowMode": "pretty",
+            "viewWindow": {}
+        },
+        "wmode": "opaque",
+        "vAxes": [{
+            "useFormatFromData": true,
+            "title": null,
+            "minValue": null,
+            "viewWindowMode": "pretty",
+            "viewWindow": {
+                "min": null,
+                "max": null
+            },
+            "maxValue": null
+        }, {
+            "useFormatFromData": true,
+            "viewWindowMode": "pretty",
+            "viewWindow": {}
+        }],
+        "booleanRole": "certainty",
+        "title": "",
+        "domainAxis": {
+            "direction": 1
+        },
+        "legend": "bottom",
+        "useFirstColumnAsDomain": true,
+        "allowCollapse": true,
+        "mapType": "hybrid",
+        "isStacked": false,
+        "width": 692,
+        "height": 348
+    },
+    "state": {},
+    "isDefaultVisualization": true,
+    "chartType": "LineChart",
+    "chartName": "Chart 1"
+}
+</script>
+
+	</div>
+	<div id="smart-actions" class="col-md-5">
+		<h3><i class="fa fa-list-alt fa-fw"></i> SMART Actions</h3>
+<iframe width='500' height='136' frameborder='0' src='https://docs.google.com/spreadsheet/pub?key=0AjC7NNDI1fmYdC03aDkxc2pVTGZ6Ry14N09QblVRUXc&single=true&gid=0&range=A1%3AC7&output=html'></iframe>
+	</div>
+</div>
+<div class="row">
+	<div id="calendar" class="col-md-7">
+		<h3><i class="fa fa-calendar fa-fw"></i> Calendar</h3>
+<iframe width='605' height='225' frameborder='0' src='https://docs.google.com/spreadsheet/pub?key=0AjC7NNDI1fmYdEJKUjJYRFBWRzcxMFpaTE9DR0UzaVE&single=true&gid=0&range=A1%3AP12&output=html'></iframe>
+	</div>
+	<div id="build-status" class="col-md-5">
+		<h3><i class="fa fa-tasks fa-fw"></i> Build</h3>
+<ul class="list-unstyled">
+	<li><a href='http://renta-jenkins.intra.cegeka.be:8080/job/Deploy Test Fms/'><img src='http://renta-jenkins.intra.cegeka.be:8080/buildStatus/icon?job=Deploy Test Fms'></a> Deploy Test Fms</li>
+	<li><a href='http://renta-jenkins.intra.cegeka.be:8080/job/Deploy Test Lac/'><img src='http://renta-jenkins.intra.cegeka.be:8080/buildStatus/icon?job=Deploy Test Lac'></a> Deploy Test Lac</li>
+	<li><a href='http://renta-jenkins.intra.cegeka.be:8080/job/Deploy Test Mrt Fresh Db/'><img src='http://renta-jenkins.intra.cegeka.be:8080/buildStatus/icon?job=Deploy Test Mrt Fresh Db'></a> Deploy Test Mrt Fresh Db</li>
+	<li><a href='http://renta-jenkins.intra.cegeka.be:8080/job/Deploy Test Mrt Fresh Db With WO/'><img src='http://renta-jenkins.intra.cegeka.be:8080/buildStatus/icon?job=Deploy Test Mrt Fresh Db With WO'></a> Deploy Test Mrt Fresh Db With WO</li>
+	<li><a href='http://renta-jenkins.intra.cegeka.be:8080/job/Deploy Test Mrt Upgrade Db/'><img src='http://renta-jenkins.intra.cegeka.be:8080/buildStatus/icon?job=Deploy Test Mrt Upgrade Db'></a> Deploy Test Mrt Upgrade Db</li>
+	<li><a href='http://renta-jenkins.intra.cegeka.be:8080/job/Deploy Test Ord/'><img src='http://renta-jenkins.intra.cegeka.be:8080/buildStatus/icon?job=Deploy Test Ord'></a> Deploy Test Ord</li>
+	<li><a href='http://renta-jenkins.intra.cegeka.be:8080/job/Dev Build Communication/'><img src='http://renta-jenkins.intra.cegeka.be:8080/buildStatus/icon?job=Dev Build Communication'></a> Dev Build Communication</li>
+	<li><a href='http://renta-jenkins.intra.cegeka.be:8080/job/Dev Build Fms/'><img src='http://renta-jenkins.intra.cegeka.be:8080/buildStatus/icon?job=Dev Build Fms'></a> Dev Build Fms</li>
+	<li><a href='http://renta-jenkins.intra.cegeka.be:8080/job/Dev Build Lac/'><img src='http://renta-jenkins.intra.cegeka.be:8080/buildStatus/icon?job=Dev Build Lac'></a> Dev Build Lac</li>
+	<li><a href='http://renta-jenkins.intra.cegeka.be:8080/job/Dev Build Mrt/'><img src='http://renta-jenkins.intra.cegeka.be:8080/buildStatus/icon?job=Dev Build Mrt'></a> Dev Build Mrt</li>
+	<li><a href='http://renta-jenkins.intra.cegeka.be:8080/job/Dev Build Ord/'><img src='http://renta-jenkins.intra.cegeka.be:8080/buildStatus/icon?job=Dev Build Ord'></a> Dev Build Ord</li>
+	<li><a href='http://renta-jenkins.intra.cegeka.be:8080/job/Dev Build Renta Common/'><img src='http://renta-jenkins.intra.cegeka.be:8080/buildStatus/icon?job=Dev Build Renta Common'></a> Dev Build Renta Common</li>
+	<li><a href='http://renta-jenkins.intra.cegeka.be:8080/job/Dev Build Reporting/'><img src='http://renta-jenkins.intra.cegeka.be:8080/buildStatus/icon?job=Dev Build Reporting'></a> Dev Build Reporting</li>
+	<li><a href='http://renta-jenkins.intra.cegeka.be:8080/job/Dev Deploy Release/'><img src='http://renta-jenkins.intra.cegeka.be:8080/buildStatus/icon?job=Dev Deploy Release'></a> Dev Deploy Release</li>
+	<li><a href='http://renta-jenkins.intra.cegeka.be:8080/job/Dev Nightly Build/'><img src='http://renta-jenkins.intra.cegeka.be:8080/buildStatus/icon?job=Dev Nightly Build'></a> Dev Nightly Build</li>
+	<li><a href='http://renta-jenkins.intra.cegeka.be:8080/job/Dev Tag Release/'><img src='http://renta-jenkins.intra.cegeka.be:8080/buildStatus/icon?job=Dev Tag Release'></a> Dev Tag Release</li>
+	<li><a href='http://renta-jenkins.intra.cegeka.be:8080/job/Workorder Migration From To/'><img src='http://renta-jenkins.intra.cegeka.be:8080/buildStatus/icon?job=Workorder Migration From To'></a> Workorder Migration From To</li>
+</ul>
+	</div>
+</div>
+	</div>
+	<div class="push"></div>
+</div>
+<footer class="footer">
+	<div id="footer" class="container footer">
+	<p class="text-muted text-center text-footer">
+		Renta Information Radiator
+	</p>
+</div>
+</footer>
+		<!-- Placed at the end of the document to speed up page loading-->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Load Bootstraps JavaScript plugins -->
+		<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+	</body>
+</html>
