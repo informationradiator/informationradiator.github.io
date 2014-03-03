@@ -9,7 +9,7 @@
         "dataMode": "markers",
         "maxAlternation": 1,
         "animation": {
-            "duration": 0
+            "duration": 500
         },
         "pointSize": "0",
         "colors": ["#3366CC", "#DC3912", "#FF9900", "#109618", "#990099", "#0099C6", "#DD4477", "#66AA00", "#B82E2E", "#316395"],
@@ -18,24 +18,29 @@
         "is3D": false,
         "hAxis": {
             "useFormatFromData": true,
-            "viewWindowMode": "pretty",
-            "viewWindow": {}
+            "viewWindowMode": null,
+            "viewWindow": null,
+            "minValue": null,
+            "maxValue": null
         },
         "wmode": "opaque",
         "vAxes": [{
             "useFormatFromData": true,
             "title": null,
             "minValue": null,
-            "viewWindowMode": "pretty",
             "viewWindow": {
-                "min": null,
-                "max": null
+                "max": null,
+                "min": null
             },
             "maxValue": null
         }, {
             "useFormatFromData": true,
-            "viewWindowMode": "pretty",
-            "viewWindow": {}
+            "viewWindow": {
+                "max": null,
+                "min": null
+            },
+            "minValue": null,
+            "maxValue": null
         }],
         "booleanRole": "certainty",
         "title": "",
@@ -48,7 +53,11 @@
         "mapType": "hybrid",
         "isStacked": false,
         "width": 692,
-        "height": 348
+        "height": 348,
+        "focusTarget": "series",
+        "tooltip": {
+            "trigger": "none"
+        }
     },
     "state": {},
     "isDefaultVisualization": true,
