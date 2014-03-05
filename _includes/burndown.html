@@ -1,7 +1,7 @@
 <h3><i class="fa fa-signal fa-fw"></i> Burndown</h3>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
 {
-    "dataSourceUrl": "https://docs.google.com/spreadsheet/tq?key=0AqJbzJ2ZC3PodGxRZ084bWkwY01sUFN5SzB4ZkJvbHc&transpose=1&headers=1&range=G19%3AQ22&gid=93&pub=1",
+    "dataSourceUrl": "//docs.google.com/spreadsheet/tq?key=0AqJbzJ2ZC3PodGxRZ084bWkwY01sUFN5SzB4ZkJvbHc&transpose=1&headers=1&range=G19%3AQ22&gid=93&pub=1",
     "options": {
         "displayAnnotations": true,
         "showTip": true,
@@ -9,7 +9,7 @@
         "dataMode": "markers",
         "maxAlternation": 1,
         "animation": {
-            "duration": 500
+            "duration": 0
         },
         "pointSize": "0",
         "colors": ["#3366CC", "#DC3912", "#FF9900", "#109618", "#990099", "#0099C6", "#DD4477", "#66AA00", "#B82E2E", "#316395"],
@@ -18,29 +18,24 @@
         "is3D": false,
         "hAxis": {
             "useFormatFromData": true,
-            "viewWindowMode": null,
-            "viewWindow": null,
-            "minValue": null,
-            "maxValue": null
+            "viewWindowMode": "pretty",
+            "viewWindow": {}
         },
         "wmode": "opaque",
         "vAxes": [{
             "useFormatFromData": true,
             "title": null,
             "minValue": null,
+            "viewWindowMode": "pretty",
             "viewWindow": {
-                "max": null,
-                "min": null
+                "min": null,
+                "max": null
             },
             "maxValue": null
         }, {
             "useFormatFromData": true,
-            "viewWindow": {
-                "max": null,
-                "min": null
-            },
-            "minValue": null,
-            "maxValue": null
+            "viewWindowMode": "pretty",
+            "viewWindow": {}
         }],
         "booleanRole": "certainty",
         "title": "",
@@ -53,11 +48,7 @@
         "mapType": "hybrid",
         "isStacked": false,
         "width": 692,
-        "height": 348,
-        "focusTarget": "series",
-        "tooltip": {
-            "trigger": "none"
-        }
+        "height": 348
     },
     "state": {},
     "isDefaultVisualization": true,
